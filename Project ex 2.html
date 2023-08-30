@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="origin-trial" content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+
+	<meta name="description" content="V-TOP : An Official VIT, Vellore Web Portal">
+	<meta name="”robots”" content="”NOODP,NOYDIR”">
+	<meta name="keywords" content="VTOP, vtop, SDC,sdc ">
+    <base href="https://vtop.vitbhopal.ac.in/vtop/">
+   	<meta http-equiv="cache-control" content="max-age=0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+
+    <title>Bhopal (VIT)</title>
+    
+    
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>VIT University - VTOP</title>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link rel="icon" type="image/png" href="assets/img/favicon.png">
+		<link rel="stylesheet" href="assets/jquery-ui/jquery-ui.css">
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+ 		<link rel="stylesheet" href="assets/plugins/css/bootstrapValidator.css">
+		<link rel="stylesheet" href="assets/plugins/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/plugins/css/AdminLteCompatibility.css">
+		<link rel="stylesheet" href="assets/plugins/css/VTopScrollbar.css">
+		<link rel="stylesheet" href="assets/plugins/css/VTop.css">		
+		<link rel="stylesheet" href="assets/plugins/css/scrollableTable.css">
+		<script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/0hCdE87LyjzAkFO5Ff-v7Hj1/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-ToIRK/fCxk6HZidjy8su24Pn+8FsKiX4QnuO0AfQZBcsd0m8DMaqafsc91h4byqU"></script><script src="assets/jquery/jquery-3.3.1.js"></script>
+		
+	
+    
+</head>
+<body class="VTopBody" style="padding-top: 100px;">
+
+		
+		<div id="page_outline">
+
+		   	
+		   	
+			<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#2980B9;color:#EAF2F8">
+  				<div class="container">
+						
+						<h3 class="pull-right" style="color: #fff;font-family:Times; font-size: 24px;"><b>V-TOP</b></h3>
+  				</div>
+			</nav>
+	
+	    	
+	    	<input type="hidden" value="" id="winImage">
+	    	<div id="page-wrapper" style="padding-top:50px;">
+	    	
+	    	<script>
+					 /*<![CDATA[*/
+				var x = "local";
+				
+				/*]]>*/
+				</script>
+	    	
+	    	
+	    	
+				<section id="loginbox" class="col-md-4 col-md-offset-4">
+	
+					<div class="box box-info">
+	
+						<div class="box-header with-border">
+							<h3 class="box-title">V-TOP Login</h3>
+						</div>
+	
+						<div class="box-body">
+						
+								<form class="form-signin" id="form-signin_v1" action="doLogin" method="POST" autocomplete="off">
+							
+								<p class="box-title text-danger"></p>
+								<p class="box-title text-danger"></p>
+								<p class="box-title text-success"></p>
+	
+								<div class="form-group has-feedback">
+									<input type="text" class="form-control bg-default" id="uname" name="uname" placeholder="Username" maxlength="20" onkeyup="this.value = this.value.toUpperCase()"> <span class="glyphicon glyphicon-user form-control-feedback"></span>
+								</div>
+	
+								<div class="form-group has-feedback">
+									<input type="password" class="form-control" id="passwd" name="passwd" placeholder="Password"> <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+								</div>
+								
+								<!-- <div th:switch="${user.role}"> 
+								  <p th:case="'admin'">User is an administrator</p>
+								  <p th:case="#{roles.manager}">User is a manager</p>
+								  <p th:case="*">User is some other thing</p> 
+								</div> -->
+	
+								<!-- <th:text>local</th:text> -->
+								
+								<div>
+	
+								 <div align="center" id="captchaRefresh">
+								
+									
+								
+								</div>  
+								</div>
+								
+								
+								<div class="box-footer">
+									<div class="col-xs-6">
+										<!-- <a href="resetPassword" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+										<a href="forgotUserID" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span> -->
+										<a href="javascript:resetPassword()" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+	                       							<a href="javascript:forgotUserID()" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span>
+									</div>
+								
+								
+									<div class="row col-xs-6">
+										<button id="captcha" class="btn btn-primary pull-right">Sign in</button>
+									</div>	
+									<!-- <div th:if="${ipstatus=='local'}"> -->
+								<!-- 	<div class="row col-xs-12">
+										 <button type="submit"  class="btn btn-primary pull-right">Sign
+											in</button> 
+								 
+									</div> -->													
+								</div>
+							</form> 
+						</div>
+					</div>
+					</section>
+				</div>
+			
+
+				
+
+
+		
+		<div class="modal fade" id="myModalFooter" role="dialog">
+		  <div class="modal-dialog">		  
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">×</button>
+		        <h4 class="modal-title" style="color:red;">Sorry !!!</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p style="color:green;">This page is under Construction !!! Please try later</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		    
+		  </div>
+		</div>
+
+		<script src="assets/jquery/jquery-3.3.1.js"></script>
+		<script src="assets/plugins/moment.js"></script>
+		<script src="assets/plugins/jquery.hotkeys.js"></script>
+		<script src="assets/plugins/jquery.slimscroll.js"></script>
+		<script src="assets/plugins/jquery.blockUI.js"></script>		
+		<script src="assets/jquery-ui/jquery-ui.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.js"></script>
+		<script src="assets/plugins/bootstrapValidator.js"></script>
+		<script src="assets/plugins/vtop-validation.js"></script>
+		<script type="text/javascript" src="assets/plugins/vit-custom.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery.validationEngine-en.js"></script>
+ 		<script type="text/javascript" src="assets/plugins/jquery.validationEngine.js"></script>
+		
+ 		<script type="text/javascript">
+		
+			window.onload = function() {
+				document.onkeydown = function(e) {
+					return (e.which || e.keyCode) != 116;
+				};
+			    $("body").css("padding-top", $(".navbar-fixed-top").height());
+			}
+			
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function() {
+				history.pushState(null, null, document.URL);
+			});
+
+		
+			$(window).bind("onunload", function() { 
+				$.blockUI();
+				ajaxCall("/cloneLogout",null,null);
+				$.unblockUI();
+			})
+
+		
+			$(document).bind('keydown', 'alt+right', function(e) {
+				e.preventDefault();
+			});
+
+			$(document).bind('keydown', 'alt+left', function(e) {
+				e.preventDefault();
+			});
+			
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function() {
+				history.pushState(null, null, document.URL);
+			});
+ 			
+			$(window).on("unload",function() {
+				$.ajax({
+					type : "POST",
+					url : "/cloneLogout",
+					success : function(response){
+					},
+					error : function(jqXHR, textStatus, errorMessage) {
+					}		
+				})
+			}); 
+
+			function doRefreshCaptcha() 
+			{
+	
+				$.ajax({
+					url : "doRefreshCaptcha",									
+					type : "POST",
+					cache : false,
+					processData : false,
+					contentType : false,
+					success : function(response)				
+					{	
+						$("#captchaRefresh").html(response);
+						
+					
+					}
+			 	});
+			}
+			
+		</script>
+			
+			
+		<script>
+		/*<![CDATA[*/
+			
+
+			
+			function resizeDiv() {
+				
+/*  				var winHeight=$( window ).height()-95;
+				$("body").css("height",winHeight+"px");
+				$("#page-content").css("height",winHeight+"px");
+				$("#sidebar-wrapper").css("height",winHeight+"px");*/
+			
+ 		}
+ 
+		   /* $("html").on("contextmenu",function(e){
+		        return false;
+		     });
+
+		     window.oncontextmenu = function () {
+		     return false;
+		     }
+		     $(document).keydown(function (event) {
+		     if (event.keyCode == 123) {
+		     return false;
+		     }
+		     else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+		     return false;
+		     }
+		     }); */
+		 
+			function resetPassword() {
+			  ajaxCall('resetPassword',null,'page_outline');
+			}
+			 
+			function forgotUserID() {
+			  ajaxCall('forgotUserID',null,'page_outline');
+			}			
+
+			function validateOTP() {
+				var data="otp="+$("#otp").val();
+				ajaxCall('validateParentLoginOtp',data,'page_outline');
+			}
+			
+			function openPage()	{
+				ajaxCall("vtopLogin",null,"page_outline");
+			}
+			
+			function openParentPage()	{
+				ajaxCall("vtopParentLogin",null,"page_outline");
+			}
+			
+			function openAlumniPage()	{
+				ajaxCall("alumni/alumniLoginPageControl",null,"page_outline");
+			}
+			
+
+			
+			
+			/*]]>*/
+		</script>			
+			
+	
+
+
+<meta http-equiv="origin-trial" content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+
+	<meta name="description" content="V-TOP : An Official VIT, Vellore Web Portal">
+	<meta name="”robots”" content="”NOODP,NOYDIR”">
+	<meta name="keywords" content="VTOP, vtop, SDC,sdc ">
+    <base href="https://vtop.vitbhopal.ac.in/vtop/">
+   	<meta http-equiv="cache-control" content="max-age=0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+
+    <title>Bhopal (VIT)</title>
+    
+    
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>VIT University - VTOP</title>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link rel="icon" type="image/png" href="assets/img/favicon.png">
+		<link rel="stylesheet" href="assets/jquery-ui/jquery-ui.css">
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+ 		<link rel="stylesheet" href="assets/plugins/css/bootstrapValidator.css">
+		<link rel="stylesheet" href="assets/plugins/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/plugins/css/AdminLteCompatibility.css">
+		<link rel="stylesheet" href="assets/plugins/css/VTopScrollbar.css">
+		<link rel="stylesheet" href="assets/plugins/css/VTop.css">		
+		<link rel="stylesheet" href="assets/plugins/css/scrollableTable.css">
+		<script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/0hCdE87LyjzAkFO5Ff-v7Hj1/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-ToIRK/fCxk6HZidjy8su24Pn+8FsKiX4QnuO0AfQZBcsd0m8DMaqafsc91h4byqU"></script><script src="assets/jquery/jquery-3.3.1.js"></script>
+		
+	
+    
+
+
+
+		
+		<div id="page_outline">
+
+		   	
+		   	
+			<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#2980B9;color:#EAF2F8">
+  				<div class="container">
+						
+						<h3 class="pull-right" style="color: #fff;font-family:Times; font-size: 24px;"><b>V-TOP</b></h3>
+  				</div>
+			</nav>
+	
+	    	
+	    	<input type="hidden" value="" id="winImage">
+	    	<div id="page-wrapper" style="padding-top:50px;">
+	    	
+	    	<script>
+					 /*<![CDATA[*/
+				var x = "local";
+				
+				/*]]>*/
+				</script>
+	    	
+	    	
+	    	
+				<section id="loginbox" class="col-md-4 col-md-offset-4">
+	
+					<div class="box box-info">
+	
+						<div class="box-header with-border">
+							<h3 class="box-title">V-TOP Login</h3>
+						</div>
+	
+						<div class="box-body">
+						
+								<form class="form-signin" id="form-signin_v1" action="doLogin" method="POST" autocomplete="off">
+							
+								<p class="box-title text-danger"></p>
+								<p class="box-title text-danger"></p>
+								<p class="box-title text-success"></p>
+	
+								<div class="form-group has-feedback">
+									<input type="text" class="form-control bg-default" id="uname" name="uname" placeholder="Username" maxlength="20" onkeyup="this.value = this.value.toUpperCase()"> <span class="glyphicon glyphicon-user form-control-feedback"></span>
+								</div>
+	
+								<div class="form-group has-feedback">
+									<input type="password" class="form-control" id="passwd" name="passwd" placeholder="Password"> <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+								</div>
+								
+								<!-- <div th:switch="${user.role}"> 
+								  <p th:case="'admin'">User is an administrator</p>
+								  <p th:case="#{roles.manager}">User is a manager</p>
+								  <p th:case="*">User is some other thing</p> 
+								</div> -->
+	
+								<!-- <th:text>local</th:text> --->
+								
+								
+								<div class="box-footer">
+									<div class="col-xs-6">
+										<!-- <a href="resetPassword" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+										<a href="forgotUserID" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span> -->
+										<a href="javascript:resetPassword()" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+	                       							<a href="javascript:forgotUserID()" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span>
+									</div>
+								
+								
+									<div class="row col-xs-6">
+										<button id="captcha" class="btn btn-primary pull-right">Sign in</button>
+									</div>	
+									<!-- <div th:if="${ipstatus=='local'}"> -->
+								<!-- 	<div class="row col-xs-12">
+										 <button type="submit"  class="btn btn-primary pull-right">Sign
+											in</button> 
+								 
+									</div> -->													
+								</div>
+							</form> 
+						</div>
+					</div>
+					</section>
+				</div>
+			
+
+ 
+ <script>
+			  function onSubmit(token) {
+			//  alert("ipstatus : "+ x);
+			  var data="uname="+$("#uname").val()+"&passwd="+ encodeURIComponent($("#passwd").val())+"&g-recaptcha-response="+$("#g-recaptcha-response").val();
+			//	alert(data);
+				ajaxCall('doLogin',data,'page_outline');
+			  //doc.submit();
+		  }
+
+		  function validate(event) {
+			  //alert("2");
+			  event.preventDefault();
+		    //var usernameRegex = new RegExp("[a-zA-Z0-9]{4,10}");
+		   /*  var usernameRegex=/^([a-zA-Z0-9]){4,20}$/;
+		    var password = /^(.){8,}$/;
+		    var username = document.getElementById('uname').value;
+		    var passwd = document.getElementById('passwd').value;
+		    if (!usernameRegex.test(username)) {
+		      swal("Enter valid username!");
+		    }else if (!password.test(passwd)) {
+		      swal("Enter valid pasword!");
+		    }else { */
+		       if(x == 'local'){
+		    		var data="uname="+$("#uname").val()+"&passwd="+ encodeURIComponent($("#passwd").val())+"&captchaCheck="+$("#captchaCheck").val();
+					//alert(data);
+					ajaxCall('doLogin',data,'page_outline');
+		      }else{ 
+		    	  grecaptcha.execute();
+		      }
+		    	
+		    //}
+		  }
+
+		  function onload() {
+			  //alert("3");
+		    var element = document.getElementById('captcha');
+		    element.onclick = validate;
+		  }
+		onload();
+	</script>
+</div>
+			
+
+		
+		<div class="modal fade" id="myModalFooter" role="dialog">
+		  <div class="modal-dialog">		  
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">×</button>
+		        <h4 class="modal-title" style="color:red;">Sorry !!!</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p style="color:green;">This page is under Construction !!! Please try later</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		    
+		  </div>
+		</div>
+
+		<script src="assets/jquery/jquery-3.3.1.js"></script>
+		<script src="assets/plugins/moment.js"></script>
+		<script src="assets/plugins/jquery.hotkeys.js"></script>
+		<script src="assets/plugins/jquery.slimscroll.js"></script>
+		<script src="assets/plugins/jquery.blockUI.js"></script>		
+		<script src="assets/jquery-ui/jquery-ui.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.js"></script>
+		<script src="assets/plugins/bootstrapValidator.js"></script>
+		<script src="assets/plugins/vtop-validation.js"></script>
+		<script type="text/javascript" src="assets/plugins/vit-custom.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery.validationEngine-en.js"></script>
+ 		<script type="text/javascript" src="assets/plugins/jquery.validationEngine.js"></script>
+		
+ 		<script type="text/javascript">
+		
+			window.onload = function() {
+				document.onkeydown = function(e) {
+					return (e.which || e.keyCode) != 116;
+				};
+			    $("body").css("padding-top", $(".navbar-fixed-top").height());
+			}
+			
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function() {
+				history.pushState(null, null, document.URL);
+			});
+
+		
+			$(window).bind("onunload", function() { 
+				$.blockUI();
+				ajaxCall("/cloneLogout",null,null);
+				$.unblockUI();
+			})
+
+		
+			$(document).bind('keydown', 'alt+right', function(e) {
+				e.preventDefault();
+			});
+
+			$(document).bind('keydown', 'alt+left', function(e) {
+				e.preventDefault();
+			});
+			
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function() {
+				history.pushState(null, null, document.URL);
+			});
+ 			
+			$(window).on("unload",function() {
+				$.ajax({
+					type : "POST",
+					url : "/cloneLogout",
+					success : function(response){
+					},
+					error : function(jqXHR, textStatus, errorMessage) {
+					}		
+				})
+			}); 
+
+			function doRefreshCaptcha() 
+			{
+	
+				$.ajax({
+					url : "doRefreshCaptcha",									
+					type : "POST",
+					cache : false,
+					processData : false,
+					contentType : false,
+					success : function(response)				
+					{	
+						$("#captchaRefresh").html(response);
+						
+					
+					}
+			 	});
+			}
+			
+		</script>
+			
+			
+		<script>
+		/*<![CDATA[*/
+			
+
+			
+			function resizeDiv() {
+				
+/*  				var winHeight=$( window ).height()-95;
+				$("body").css("height",winHeight+"px");
+				$("#page-content").css("height",winHeight+"px");
+				$("#sidebar-wrapper").css("height",winHeight+"px");*/
+			
+ 		}
+ 
+		   /* $("html").on("contextmenu",function(e){
+		        return false;
+		     });
+
+		     window.oncontextmenu = function () {
+		     return false;
+		     }
+		     $(document).keydown(function (event) {
+		     if (event.keyCode == 123) {
+		     return false;
+		     }
+		     else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+		     return false;
+		     }
+		     }); */
+		 
+			function resetPassword() {
+			  ajaxCall('resetPassword',null,'page_outline');
+			}
+			 
+			function forgotUserID() {
+			  ajaxCall('forgotUserID',null,'page_outline');
+			}			
+
+			function validateOTP() {
+				var data="otp="+$("#otp").val();
+				ajaxCall('validateParentLoginOtp',data,'page_outline');
+			}
+			
+			function openPage()	{
+				ajaxCall("vtopLogin",null,"page_outline");
+			}
+			
+			function openParentPage()	{
+				ajaxCall("vtopParentLogin",null,"page_outline");
+			}
+			
+			function openAlumniPage()	{
+				ajaxCall("alumni/alumniLoginPageControl",null,"page_outline");
+			}
+			
+
+			
+			
+			/*]]>*/
+		</script>			
+			
+	
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</div></body>
+<head><meta http-equiv="origin-trial" content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+
+	<meta name="description" content="V-TOP : An Official VIT, Vellore Web Portal">
+	<meta name="”robots”" content="”NOODP,NOYDIR”">
+	<meta name="keywords" content="VTOP, vtop, SDC,sdc ">
+    <base href="https://vtop.vitbhopal.ac.in/vtop/">
+   	<meta http-equiv="cache-control" content="max-age=0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+
+    <title>Bhopal (VIT)</title>
+    
+    
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>VIT University - VTOP</title>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link rel="icon" type="image/png" href="assets/img/favicon.png">
+		<link rel="stylesheet" href="assets/jquery-ui/jquery-ui.css">
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+ 		<link rel="stylesheet" href="assets/plugins/css/bootstrapValidator.css">
+		<link rel="stylesheet" href="assets/plugins/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/plugins/css/AdminLteCompatibility.css">
+		<link rel="stylesheet" href="assets/plugins/css/VTopScrollbar.css">
+		<link rel="stylesheet" href="assets/plugins/css/VTop.css">		
+		<link rel="stylesheet" href="assets/plugins/css/scrollableTable.css">
+		<script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/0hCdE87LyjzAkFO5Ff-v7Hj1/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-ToIRK/fCxk6HZidjy8su24Pn+8FsKiX4QnuO0AfQZBcsd0m8DMaqafsc91h4byqU"></script><script src="assets/jquery/jquery-3.3.1.js"></script>
+		
+	
+    
+</head>
+<body class="VTopBody" style="padding-top: 100px;">
+
+		
+    <div id="page_outline">
+
+           
+           
+        <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#2980B9;color:#EAF2F8">
+              <div class="container">
+                    
+                    <h3 class="pull-right" style="color: #fff;font-family:Times; font-size: 24px;"><b>V-TOP</b></h3>
+              </div>
+        </nav>
+
+        
+        <input type="hidden" value="" id="winImage">
+        <div id="page-wrapper" style="padding-top:50px;">
+        
+        <script>
+                 /*<![CDATA[*/
+            var x = "local";
+            
+            /*]]>*/
+            </script>
+        
+        
+        
+            <section id="loginbox" class="col-md-4 col-md-offset-4">
+
+                <div class="box box-info">
+
+                    <div class="box-header with-border">
+                        <h3 class="box-title">V-TOP Login</h3>
+                    </div>
+
+                    <div class="box-body">
+                    
+                            <form class="form-signin" id="form-signin_v1" action="doLogin" method="POST" autocomplete="off">
+                        
+                            <p class="box-title text-danger"></p>
+                            <p class="box-title text-danger"></p>
+                            <p class="box-title text-success"></p>
+
+                            <div class="form-group has-feedback">
+                                <input type="text" class="form-control bg-default" id="uname" name="uname" placeholder="Username" maxlength="20" onkeyup="this.value = this.value.toUpperCase()"> <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                            </div>
+
+                            <div class="form-group has-feedback">
+                                <input type="password" class="form-control" id="passwd" name="passwd" placeholder="Password"> <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                            </div>
+                            
+                            <!-- <div th:switch="${user.role}"> 
+                              <p th:case="'admin'">User is an administrator</p>
+                              <p th:case="#{roles.manager}">User is a manager</p>
+                              <p th:case="*">User is some other thing</p> 
+                            </div> -->
+
+                            <!-- <th:text>local</th:text> -->
+                            
+                            <div>
+
+                             <div align="center" id="captchaRefresh">
+                            
+                                
+                            
+                            </div>  
+                            </div>
+                            
+                            
+                            <div class="box-footer">
+                                <div class="col-xs-6">
+                                    <!-- <a href="resetPassword" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+                                    <a href="forgotUserID" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span> -->
+                                    <a href="javascript:resetPassword()" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+                                                   <a href="javascript:forgotUserID()" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span>
+                                </div>
+                            
+                            
+                                <div class="row col-xs-6">
+                                    <button id="captcha" class="btn btn-primary pull-right">Sign in</button>
+                                </div>	
+                                <!-- <div th:if="${ipstatus=='local'}"> -->
+                            <!-- 	<div class="row col-xs-12">
+                                     <button type="submit"  class="btn btn-primary pull-right">Sign
+                                        in</button> 
+                             
+                                </div> -->													
+                            </div>
+                        </form> 
+                    </div>
+                </div>
+                </section>
+            </div>
+        
+
+            
+
+
+    
+    <div class="modal fade" id="myModalFooter" role="dialog">
+      <div class="modal-dialog">		  
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h4 class="modal-title" style="color:red;">Sorry !!!</h4>
+          </div>
+          <div class="modal-body">
+            <p style="color:green;">This page is under Construction !!! Please try later</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <script src="assets/jquery/jquery-3.3.1.js"></script>
+    <script src="assets/plugins/moment.js"></script>
+    <script src="assets/plugins/jquery.hotkeys.js"></script>
+    <script src="assets/plugins/jquery.slimscroll.js"></script>
+    <script src="assets/plugins/jquery.blockUI.js"></script>		
+    <script src="assets/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <script src="assets/plugins/bootstrapValidator.js"></script>
+    <script src="assets/plugins/vtop-validation.js"></script>
+    <script type="text/javascript" src="assets/plugins/vit-custom.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery.validationEngine-en.js"></script>
+     <script type="text/javascript" src="assets/plugins/jquery.validationEngine.js"></script>
+    
+     <script type="text/javascript">
+    
+        window.onload = function() {
+            document.onkeydown = function(e) {
+                return (e.which || e.keyCode) != 116;
+            };
+            $("body").css("padding-top", $(".navbar-fixed-top").height());
+        }
+        
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function() {
+            history.pushState(null, null, document.URL);
+        });
+
+    
+        $(window).bind("onunload", function() { 
+            $.blockUI();
+            ajaxCall("/cloneLogout",null,null);
+            $.unblockUI();
+        })
+
+    
+        $(document).bind('keydown', 'alt+right', function(e) {
+            e.preventDefault();
+        });
+
+        $(document).bind('keydown', 'alt+left', function(e) {
+            e.preventDefault();
+        });
+        
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function() {
+            history.pushState(null, null, document.URL);
+        });
+         
+        $(window).on("unload",function() {
+            $.ajax({
+                type : "POST",
+                url : "/cloneLogout",
+                success : function(response){
+                },
+                error : function(jqXHR, textStatus, errorMessage) {
+                }		
+            })
+        }); 
+
+        function doRefreshCaptcha() 
+        {
+
+            $.ajax({
+                url : "doRefreshCaptcha",									
+                type : "POST",
+                cache : false,
+                processData : false,
+                contentType : false,
+                success : function(response)				
+                {	
+                    $("#captchaRefresh").html(response);
+                    
+                
+                }
+             });
+        }
+        
+    </script>
+        
+        
+    <script>
+    /*<![CDATA[*/
+        
+
+        
+        function resizeDiv() {
+            
+/*  				var winHeight=$( window ).height()-95;
+            $("body").css("height",winHeight+"px");
+            $("#page-content").css("height",winHeight+"px");
+            $("#sidebar-wrapper").css("height",winHeight+"px");*/
+        
+     }
+
+       /* $("html").on("contextmenu",function(e){
+            return false;
+         });
+
+         window.oncontextmenu = function () {
+         return false;
+         }
+         $(document).keydown(function (event) {
+         if (event.keyCode == 123) {
+         return false;
+         }
+         else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+         return false;
+         }
+         }); */
+     
+        function resetPassword() {
+          ajaxCall('resetPassword',null,'page_outline');
+        }
+         
+        function forgotUserID() {
+          ajaxCall('forgotUserID',null,'page_outline');
+        }			
+
+        function validateOTP() {
+            var data="otp="+$("#otp").val();
+            ajaxCall('validateParentLoginOtp',data,'page_outline');
+        }
+        
+        function openPage()	{
+            ajaxCall("vtopLogin",null,"page_outline");
+        }
+        
+        function openParentPage()	{
+            ajaxCall("vtopParentLogin",null,"page_outline");
+        }
+        
+        function openAlumniPage()	{
+            ajaxCall("alumni/alumniLoginPageControl",null,"page_outline");
+        }
+        
+
+        
+        
+        /*]]>*/
+    </script>			
+        
+
+
+
+<meta http-equiv="origin-trial" content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+
+<meta name="description" content="V-TOP : An Official VIT, Vellore Web Portal">
+<meta name="”robots”" content="”NOODP,NOYDIR”">
+<meta name="keywords" content="VTOP, vtop, SDC,sdc ">
+<base href="https://vtop.vitbhopal.ac.in/vtop/">
+   <meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta charset="utf-8">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+<title>Bhopal (VIT)</title>
+
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VIT University - VTOP</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+     <link rel="stylesheet" href="assets/plugins/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="assets/plugins/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/css/AdminLteCompatibility.css">
+    <link rel="stylesheet" href="assets/plugins/css/VTopScrollbar.css">
+    <link rel="stylesheet" href="assets/plugins/css/VTop.css">		
+    <link rel="stylesheet" href="assets/plugins/css/scrollableTable.css">
+    <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/0hCdE87LyjzAkFO5Ff-v7Hj1/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-ToIRK/fCxk6HZidjy8su24Pn+8FsKiX4QnuO0AfQZBcsd0m8DMaqafsc91h4byqU"></script><script src="assets/jquery/jquery-3.3.1.js"></script>
+    
+
+
+
+
+
+    
+    <div id="page_outline">
+
+           
+           
+        <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#2980B9;color:#EAF2F8">
+              <div class="container">
+                    
+                    <h3 class="pull-right" style="color: #fff;font-family:Times; font-size: 24px;"><b>V-TOP</b></h3>
+              </div>
+        </nav>
+
+        
+        <input type="hidden" value="" id="winImage">
+        <div id="page-wrapper" style="padding-top:50px;">
+        
+        <script>
+                 /*<![CDATA[*/
+            var x = "local";
+            
+            /*]]>*/
+            </script>
+        
+        
+        
+            <section id="loginbox" class="col-md-4 col-md-offset-4">
+
+                <div class="box box-info">
+
+                    <div class="box-header with-border">
+                        <h3 class="box-title">V-TOP Login</h3>
+                    </div>
+
+                    <div class="box-body">
+                    
+                            <form class="form-signin" id="form-signin_v1" action="doLogin" method="POST" autocomplete="off">
+                        
+                            <p class="box-title text-danger"></p>
+                            <p class="box-title text-danger"></p>
+                            <p class="box-title text-success"></p>
+
+                            <div class="form-group has-feedback">
+                                <input type="text" class="form-control bg-default" id="uname" name="uname" placeholder="Username" maxlength="20" onkeyup="this.value = this.value.toUpperCase()"> <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                            </div>
+
+                            <div class="form-group has-feedback">
+                                <input type="password" class="form-control" id="passwd" name="passwd" placeholder="Password"> <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                            </div>
+                            
+                            <!-- <div th:switch="${user.role}"> 
+                              <p th:case="'admin'">User is an administrator</p>
+                              <p th:case="#{roles.manager}">User is a manager</p>
+                              <p th:case="*">User is some other thing</p> 
+                            </div> -->
+
+                            <!-- <th:text>local</th:text> --->
+                            
+                            
+                            <div class="box-footer">
+                                <div class="col-xs-6">
+                                    <!-- <a href="resetPassword" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+                                    <a href="forgotUserID" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span> -->
+                                    <a href="javascript:resetPassword()" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+                                                   <a href="javascript:forgotUserID()" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span>
+                                </div>
+                            
+                            
+                                <div class="row col-xs-6">
+                                    <button id="captcha" class="btn btn-primary pull-right">Sign in</button>
+                                </div>	
+                                <!-- <div th:if="${ipstatus=='local'}"> -->
+                            <!-- 	<div class="row col-xs-12">
+                                     <button type="submit"  class="btn btn-primary pull-right">Sign
+                                        in</button> 
+                             
+                                </div> -->													
+                            </div>
+                        </form> 
+                    </div>
+                </div>
+                </section>
+            </div>
+        
+
+
+<script>
+          function onSubmit(token) {
+        //  alert("ipstatus : "+ x);
+          var data="uname="+$("#uname").val()+"&passwd="+ encodeURIComponent($("#passwd").val())+"&g-recaptcha-response="+$("#g-recaptcha-response").val();
+        //	alert(data);
+            ajaxCall('doLogin',data,'page_outline');
+          //doc.submit();
+      }
+
+      function validate(event) {
+          //alert("2");
+          event.preventDefault();
+        //var usernameRegex = new RegExp("[a-zA-Z0-9]{4,10}");
+       /*  var usernameRegex=/^([a-zA-Z0-9]){4,20}$/;
+        var password = /^(.){8,}$/;
+        var username = document.getElementById('uname').value;
+        var passwd = document.getElementById('passwd').value;
+        if (!usernameRegex.test(username)) {
+          swal("Enter valid username!");
+        }else if (!password.test(passwd)) {
+          swal("Enter valid pasword!");
+        }else { */
+           if(x == 'local'){
+                var data="uname="+$("#uname").val()+"&passwd="+ encodeURIComponent($("#passwd").val())+"&captchaCheck="+$("#captchaCheck").val();
+                //alert(data);
+                ajaxCall('doLogin',data,'page_outline');
+          }else{ 
+              grecaptcha.execute();
+          }
+            
+        //}
+      }
+
+      function onload() {
+          //alert("3");
+        var element = document.getElementById('captcha');
+        element.onclick = validate;
+      }
+    onload();
+</script>
+</div>
+        
+
+    
+    <div class="modal fade" id="myModalFooter" role="dialog">
+      <div class="modal-dialog">		  
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h4 class="modal-title" style="color:red;">Sorry !!!</h4>
+          </div>
+          <div class="modal-body">
+            <p style="color:green;">This page is under Construction !!! Please try later</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <script src="assets/jquery/jquery-3.3.1.js"></script>
+    <script src="assets/plugins/moment.js"></script>
+    <script src="assets/plugins/jquery.hotkeys.js"></script>
+    <script src="assets/plugins/jquery.slimscroll.js"></script>
+    <script src="assets/plugins/jquery.blockUI.js"></script>		
+    <script src="assets/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <script src="assets/plugins/bootstrapValidator.js"></script>
+    <script src="assets/plugins/vtop-validation.js"></script>
+    <script type="text/javascript" src="assets/plugins/vit-custom.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery.validationEngine-en.js"></script>
+     <script type="text/javascript" src="assets/plugins/jquery.validationEngine.js"></script>
+    
+     <script type="text/javascript">
+    
+        window.onload = function() {
+            document.onkeydown = function(e) {
+                return (e.which || e.keyCode) != 116;
+            };
+            $("body").css("padding-top", $(".navbar-fixed-top").height());
+        }
+        
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function() {
+            history.pushState(null, null, document.URL);
+        });
+
+    
+        $(window).bind("onunload", function() { 
+            $.blockUI();
+            ajaxCall("/cloneLogout",null,null);
+            $.unblockUI();
+        })
+
+    
+        $(document).bind('keydown', 'alt+right', function(e) {
+            e.preventDefault();
+        });
+
+        $(document).bind('keydown', 'alt+left', function(e) {
+            e.preventDefault();
+        });
+        
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function() {
+            history.pushState(null, null, document.URL);
+        });
+         
+        $(window).on("unload",function() {
+            $.ajax({
+                type : "POST",
+                url : "/cloneLogout",
+                success : function(response){
+                },
+                error : function(jqXHR, textStatus, errorMessage) {
+                }		
+            })
+        }); 
+
+        function doRefreshCaptcha() 
+        {
+
+            $.ajax({
+                url : "doRefreshCaptcha",									
+                type : "POST",
+                cache : false,
+                processData : false,
+                contentType : false,
+                success : function(response)				
+                {	
+                    $("#captchaRefresh").html(response);
+                    
+                
+                }
+             });
+        }
+        
+    </script>
+        
+        
+    <script>
+    /*<![CDATA[*/
+        
+
+        
+        function resizeDiv() {
+            
+/*  				var winHeight=$( window ).height()-95;
+            $("body").css("height",winHeight+"px");
+            $("#page-content").css("height",winHeight+"px");
+            $("#sidebar-wrapper").css("height",winHeight+"px");*/
+        
+     }
+
+       /* $("html").on("contextmenu",function(e){
+            return false;
+         });
+
+         window.oncontextmenu = function () {
+         return false;
+         }
+         $(document).keydown(function (event) {
+         if (event.keyCode == 123) {
+         return false;
+         }
+         else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+         return false;
+         }
+         }); */
+     
+        function resetPassword() {
+          ajaxCall('resetPassword',null,'page_outline');
+        }
+         
+        function forgotUserID() {
+          ajaxCall('forgotUserID',null,'page_outline');
+        }			
+
+        function validateOTP() {
+            var data="otp="+$("#otp").val();
+            ajaxCall('validateParentLoginOtp',data,'page_outline');
+        }
+        
+        function openPage()	{
+            ajaxCall("vtopLogin",null,"page_outline");
+        }
+        
+        function openParentPage()	{
+            ajaxCall("vtopParentLogin",null,"page_outline");
+        }
+        
+        function openAlumniPage()	{
+            ajaxCall("alumni/alumniLoginPageControl",null,"page_outline");
+        }
+        
+
+        
+        
+        /*]]>*/
+    </script>			
+        
+
+
+
+<!-- Code injected by live-server -->
+<script>
+// <![CDATA[  <-- For SVG support
+if ('WebSocket' in window) {
+    (function () {
+        function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+                var elem = sheets[i];
+                var parent = elem.parentElement || head;
+                parent.removeChild(elem);
+                var rel = elem.rel;
+                if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                    var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                    elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                }
+                parent.appendChild(elem);
+            }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function (msg) {
+            if (msg.data == 'reload') window.location.reload();
+            else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+            console.log('Live reload enabled.');
+            sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+    })();
+}
+else {
+    console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+}
+// ]]>
+</script>
+</div></body>
+<html lang="en"><head><meta http-equiv="origin-trial" content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+
+	<meta name="description" content="V-TOP : An Official VIT, Vellore Web Portal">
+	<meta name="”robots”" content="”NOODP,NOYDIR”">
+	<meta name="keywords" content="VTOP, vtop, SDC,sdc ">
+    <base href="https://vtop.vitbhopal.ac.in/vtop/">
+   	<meta http-equiv="cache-control" content="max-age=0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+
+    <title>Bhopal (VIT)</title>
+    
+    
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>VIT University - VTOP</title>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link rel="icon" type="image/png" href="assets/img/favicon.png">
+		<link rel="stylesheet" href="assets/jquery-ui/jquery-ui.css">
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+ 		<link rel="stylesheet" href="assets/plugins/css/bootstrapValidator.css">
+		<link rel="stylesheet" href="assets/plugins/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/plugins/css/AdminLteCompatibility.css">
+		<link rel="stylesheet" href="assets/plugins/css/VTopScrollbar.css">
+		<link rel="stylesheet" href="assets/plugins/css/VTop.css">		
+		<link rel="stylesheet" href="assets/plugins/css/scrollableTable.css">
+		<script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/0hCdE87LyjzAkFO5Ff-v7Hj1/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-ToIRK/fCxk6HZidjy8su24Pn+8FsKiX4QnuO0AfQZBcsd0m8DMaqafsc91h4byqU"></script><script src="assets/jquery/jquery-3.3.1.js"></script>
+		
+	
+    
+</head>
+<body class="VTopBody" style="padding-top: 100px;">
+
+		
+		<div id="page_outline">
+
+		   	
+		   	
+			<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#2980B9;color:#EAF2F8">
+  				<div class="container">
+						
+						<h3 class="pull-right" style="color: #fff;font-family:Times; font-size: 24px;"><b>V-TOP</b></h3>
+  				</div>
+			</nav>
+	
+	    	
+	    	<input type="hidden" value="" id="winImage">
+	    	<div id="page-wrapper" style="padding-top:50px;">
+	    	
+	    	<script>
+					 /*<![CDATA[*/
+				var x = "local";
+				
+				/*]]>*/
+				</script>
+	    	
+	    	
+	    	
+				<section id="loginbox" class="col-md-4 col-md-offset-4">
+	
+					<div class="box box-info">
+	
+						<div class="box-header with-border">
+							<h3 class="box-title">V-TOP Login</h3>
+						</div>
+	
+						<div class="box-body">
+						
+								<form class="form-signin" id="form-signin_v1" action="doLogin" method="POST" autocomplete="off">
+							
+								<p class="box-title text-danger"></p>
+								<p class="box-title text-danger"></p>
+								<p class="box-title text-success"></p>
+	
+								<div class="form-group has-feedback">
+									<input type="text" class="form-control bg-default" id="uname" name="uname" placeholder="Username" maxlength="20" onkeyup="this.value = this.value.toUpperCase()"> <span class="glyphicon glyphicon-user form-control-feedback"></span>
+								</div>
+	
+								<div class="form-group has-feedback">
+									<input type="password" class="form-control" id="passwd" name="passwd" placeholder="Password"> <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+								</div>
+								
+								<!-- <div th:switch="${user.role}"> 
+								  <p th:case="'admin'">User is an administrator</p>
+								  <p th:case="#{roles.manager}">User is a manager</p>
+								  <p th:case="*">User is some other thing</p> 
+								</div> -->
+	
+								<!-- <th:text>local</th:text> -->
+								
+								<div>
+	
+								 <div align="center" id="captchaRefresh">
+								
+									
+								
+								</div>  
+								</div>
+								
+								
+								<div class="box-footer">
+									<div class="col-xs-6">
+										<!-- <a href="resetPassword" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+										<a href="forgotUserID" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span> -->
+										<a href="javascript:resetPassword()" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+	                       							<a href="javascript:forgotUserID()" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span>
+									</div>
+								
+								
+									<div class="row col-xs-6">
+										<button id="captcha" class="btn btn-primary pull-right">Sign in</button>
+									</div>	
+									<!-- <div th:if="${ipstatus=='local'}"> -->
+								<!-- 	<div class="row col-xs-12">
+										 <button type="submit"  class="btn btn-primary pull-right">Sign
+											in</button> 
+								 
+									</div> -->													
+								</div>
+							</form> 
+						</div>
+					</div>
+					</section>
+				</div>
+			
+
+				
+
+
+		
+		<div class="modal fade" id="myModalFooter" role="dialog">
+		  <div class="modal-dialog">		  
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">×</button>
+		        <h4 class="modal-title" style="color:red;">Sorry !!!</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p style="color:green;">This page is under Construction !!! Please try later</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		    
+		  </div>
+		</div>
+
+		<script src="assets/jquery/jquery-3.3.1.js"></script>
+		<script src="assets/plugins/moment.js"></script>
+		<script src="assets/plugins/jquery.hotkeys.js"></script>
+		<script src="assets/plugins/jquery.slimscroll.js"></script>
+		<script src="assets/plugins/jquery.blockUI.js"></script>		
+		<script src="assets/jquery-ui/jquery-ui.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.js"></script>
+		<script src="assets/plugins/bootstrapValidator.js"></script>
+		<script src="assets/plugins/vtop-validation.js"></script>
+		<script type="text/javascript" src="assets/plugins/vit-custom.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery.validationEngine-en.js"></script>
+ 		<script type="text/javascript" src="assets/plugins/jquery.validationEngine.js"></script>
+		
+ 		<script type="text/javascript">
+		
+			window.onload = function() {
+				document.onkeydown = function(e) {
+					return (e.which || e.keyCode) != 116;
+				};
+			    $("body").css("padding-top", $(".navbar-fixed-top").height());
+			}
+			
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function() {
+				history.pushState(null, null, document.URL);
+			});
+
+		
+			$(window).bind("onunload", function() { 
+				$.blockUI();
+				ajaxCall("/cloneLogout",null,null);
+				$.unblockUI();
+			})
+
+		
+			$(document).bind('keydown', 'alt+right', function(e) {
+				e.preventDefault();
+			});
+
+			$(document).bind('keydown', 'alt+left', function(e) {
+				e.preventDefault();
+			});
+			
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function() {
+				history.pushState(null, null, document.URL);
+			});
+ 			
+			$(window).on("unload",function() {
+				$.ajax({
+					type : "POST",
+					url : "/cloneLogout",
+					success : function(response){
+					},
+					error : function(jqXHR, textStatus, errorMessage) {
+					}		
+				})
+			}); 
+
+			function doRefreshCaptcha() 
+			{
+	
+				$.ajax({
+					url : "doRefreshCaptcha",									
+					type : "POST",
+					cache : false,
+					processData : false,
+					contentType : false,
+					success : function(response)				
+					{	
+						$("#captchaRefresh").html(response);
+						
+					
+					}
+			 	});
+			}
+			
+		</script>
+			
+			
+		<script>
+		/*<![CDATA[*/
+			
+
+			
+			function resizeDiv() {
+				
+/*  				var winHeight=$( window ).height()-95;
+				$("body").css("height",winHeight+"px");
+				$("#page-content").css("height",winHeight+"px");
+				$("#sidebar-wrapper").css("height",winHeight+"px");*/
+			
+ 		}
+ 
+		   /* $("html").on("contextmenu",function(e){
+		        return false;
+		     });
+
+		     window.oncontextmenu = function () {
+		     return false;
+		     }
+		     $(document).keydown(function (event) {
+		     if (event.keyCode == 123) {
+		     return false;
+		     }
+		     else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+		     return false;
+		     }
+		     }); */
+		 
+			function resetPassword() {
+			  ajaxCall('resetPassword',null,'page_outline');
+			}
+			 
+			function forgotUserID() {
+			  ajaxCall('forgotUserID',null,'page_outline');
+			}			
+
+			function validateOTP() {
+				var data="otp="+$("#otp").val();
+				ajaxCall('validateParentLoginOtp',data,'page_outline');
+			}
+			
+			function openPage()	{
+				ajaxCall("vtopLogin",null,"page_outline");
+			}
+			
+			function openParentPage()	{
+				ajaxCall("vtopParentLogin",null,"page_outline");
+			}
+			
+			function openAlumniPage()	{
+				ajaxCall("alumni/alumniLoginPageControl",null,"page_outline");
+			}
+			
+
+			
+			
+			/*]]>*/
+		</script>			
+			
+	
+
+
+<meta http-equiv="origin-trial" content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+
+	<meta name="description" content="V-TOP : An Official VIT, Vellore Web Portal">
+	<meta name="”robots”" content="”NOODP,NOYDIR”">
+	<meta name="keywords" content="VTOP, vtop, SDC,sdc ">
+    <base href="https://vtop.vitbhopal.ac.in/vtop/">
+   	<meta http-equiv="cache-control" content="max-age=0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+
+    <title>Bhopal (VIT)</title>
+    
+    
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>VIT University - VTOP</title>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link rel="icon" type="image/png" href="assets/img/favicon.png">
+		<link rel="stylesheet" href="assets/jquery-ui/jquery-ui.css">
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+ 		<link rel="stylesheet" href="assets/plugins/css/bootstrapValidator.css">
+		<link rel="stylesheet" href="assets/plugins/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/plugins/css/AdminLteCompatibility.css">
+		<link rel="stylesheet" href="assets/plugins/css/VTopScrollbar.css">
+		<link rel="stylesheet" href="assets/plugins/css/VTop.css">		
+		<link rel="stylesheet" href="assets/plugins/css/scrollableTable.css">
+		<script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/0hCdE87LyjzAkFO5Ff-v7Hj1/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-ToIRK/fCxk6HZidjy8su24Pn+8FsKiX4QnuO0AfQZBcsd0m8DMaqafsc91h4byqU"></script><script src="assets/jquery/jquery-3.3.1.js"></script>
+		
+	
+    
+
+
+
+		
+		<div id="page_outline">
+
+		   	
+		   	
+			<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#2980B9;color:#EAF2F8">
+  				<div class="container">
+						
+						<h3 class="pull-right" style="color: #fff;font-family:Times; font-size: 24px;"><b>V-TOP</b></h3>
+  				</div>
+			</nav>
+	
+	    	
+	    	<input type="hidden" value="" id="winImage">
+	    	<div id="page-wrapper" style="padding-top:50px;">
+	    	
+	    	<script>
+					 /*<![CDATA[*/
+				var x = "local";
+				
+				/*]]>*/
+				</script>
+	    	
+	    	
+	    	
+				<section id="loginbox" class="col-md-4 col-md-offset-4">
+	
+					<div class="box box-info">
+	
+						<div class="box-header with-border">
+							<h3 class="box-title">V-TOP Login</h3>
+						</div>
+	
+						<div class="box-body">
+						
+								<form class="form-signin" id="form-signin_v1" action="doLogin" method="POST" autocomplete="off">
+							
+								<p class="box-title text-danger"></p>
+								<p class="box-title text-danger"></p>
+								<p class="box-title text-success"></p>
+	
+								<div class="form-group has-feedback">
+									<input type="text" class="form-control bg-default" id="uname" name="uname" placeholder="Username" maxlength="20" onkeyup="this.value = this.value.toUpperCase()"> <span class="glyphicon glyphicon-user form-control-feedback"></span>
+								</div>
+	
+								<div class="form-group has-feedback">
+									<input type="password" class="form-control" id="passwd" name="passwd" placeholder="Password"> <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+								</div>
+								
+								<!-- <div th:switch="${user.role}"> 
+								  <p th:case="'admin'">User is an administrator</p>
+								  <p th:case="#{roles.manager}">User is a manager</p>
+								  <p th:case="*">User is some other thing</p> 
+								</div> -->
+	
+								<!-- <th:text>local</th:text> --->
+								
+								
+								<div class="box-footer">
+									<div class="col-xs-6">
+										<!-- <a href="resetPassword" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+										<a href="forgotUserID" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span> -->
+										<a href="javascript:resetPassword()" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+	                       							<a href="javascript:forgotUserID()" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span>
+									</div>
+								
+								
+									<div class="row col-xs-6">
+										<button id="captcha" class="btn btn-primary pull-right">Sign in</button>
+									</div>	
+									<!-- <div th:if="${ipstatus=='local'}"> -->
+								<!-- 	<div class="row col-xs-12">
+										 <button type="submit"  class="btn btn-primary pull-right">Sign
+											in</button> 
+								 
+									</div> -->													
+								</div>
+							</form> 
+						</div>
+					</div>
+					</section>
+				</div>
+			
+
+ 
+ <script>
+			  function onSubmit(token) {
+			//  alert("ipstatus : "+ x);
+			  var data="uname="+$("#uname").val()+"&passwd="+ encodeURIComponent($("#passwd").val())+"&g-recaptcha-response="+$("#g-recaptcha-response").val();
+			//	alert(data);
+				ajaxCall('doLogin',data,'page_outline');
+			  //doc.submit();
+		  }
+
+		  function validate(event) {
+			  //alert("2");
+			  event.preventDefault();
+		    //var usernameRegex = new RegExp("[a-zA-Z0-9]{4,10}");
+		   /*  var usernameRegex=/^([a-zA-Z0-9]){4,20}$/;
+		    var password = /^(.){8,}$/;
+		    var username = document.getElementById('uname').value;
+		    var passwd = document.getElementById('passwd').value;
+		    if (!usernameRegex.test(username)) {
+		      swal("Enter valid username!");
+		    }else if (!password.test(passwd)) {
+		      swal("Enter valid pasword!");
+		    }else { */
+		       if(x == 'local'){
+		    		var data="uname="+$("#uname").val()+"&passwd="+ encodeURIComponent($("#passwd").val())+"&captchaCheck="+$("#captchaCheck").val();
+					//alert(data);
+					ajaxCall('doLogin',data,'page_outline');
+		      }else{ 
+		    	  grecaptcha.execute();
+		      }
+		    	
+		    //}
+		  }
+
+		  function onload() {
+			  //alert("3");
+		    var element = document.getElementById('captcha');
+		    element.onclick = validate;
+		  }
+		onload();
+	</script>
+</div>
+			
+
+		
+		<div class="modal fade" id="myModalFooter" role="dialog">
+		  <div class="modal-dialog">		  
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">×</button>
+		        <h4 class="modal-title" style="color:red;">Sorry !!!</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p style="color:green;">This page is under Construction !!! Please try later</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		    
+		  </div>
+		</div>
+
+		<script src="assets/jquery/jquery-3.3.1.js"></script>
+		<script src="assets/plugins/moment.js"></script>
+		<script src="assets/plugins/jquery.hotkeys.js"></script>
+		<script src="assets/plugins/jquery.slimscroll.js"></script>
+		<script src="assets/plugins/jquery.blockUI.js"></script>		
+		<script src="assets/jquery-ui/jquery-ui.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.js"></script>
+		<script src="assets/plugins/bootstrapValidator.js"></script>
+		<script src="assets/plugins/vtop-validation.js"></script>
+		<script type="text/javascript" src="assets/plugins/vit-custom.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery.validationEngine-en.js"></script>
+ 		<script type="text/javascript" src="assets/plugins/jquery.validationEngine.js"></script>
+		
+ 		<script type="text/javascript">
+		
+			window.onload = function() {
+				document.onkeydown = function(e) {
+					return (e.which || e.keyCode) != 116;
+				};
+			    $("body").css("padding-top", $(".navbar-fixed-top").height());
+			}
+			
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function() {
+				history.pushState(null, null, document.URL);
+			});
+
+		
+			$(window).bind("onunload", function() { 
+				$.blockUI();
+				ajaxCall("/cloneLogout",null,null);
+				$.unblockUI();
+			})
+
+		
+			$(document).bind('keydown', 'alt+right', function(e) {
+				e.preventDefault();
+			});
+
+			$(document).bind('keydown', 'alt+left', function(e) {
+				e.preventDefault();
+			});
+			
+			history.pushState(null, null, document.URL);
+			window.addEventListener('popstate', function() {
+				history.pushState(null, null, document.URL);
+			});
+ 			
+			$(window).on("unload",function() {
+				$.ajax({
+					type : "POST",
+					url : "/cloneLogout",
+					success : function(response){
+					},
+					error : function(jqXHR, textStatus, errorMessage) {
+					}		
+				})
+			}); 
+
+			function doRefreshCaptcha() 
+			{
+	
+				$.ajax({
+					url : "doRefreshCaptcha",									
+					type : "POST",
+					cache : false,
+					processData : false,
+					contentType : false,
+					success : function(response)				
+					{	
+						$("#captchaRefresh").html(response);
+						
+					
+					}
+			 	});
+			}
+			
+		</script>
+			
+			
+		<script>
+		/*<![CDATA[*/
+			
+
+			
+			function resizeDiv() {
+				
+/*  				var winHeight=$( window ).height()-95;
+				$("body").css("height",winHeight+"px");
+				$("#page-content").css("height",winHeight+"px");
+				$("#sidebar-wrapper").css("height",winHeight+"px");*/
+			
+ 		}
+ 
+		   /* $("html").on("contextmenu",function(e){
+		        return false;
+		     });
+
+		     window.oncontextmenu = function () {
+		     return false;
+		     }
+		     $(document).keydown(function (event) {
+		     if (event.keyCode == 123) {
+		     return false;
+		     }
+		     else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+		     return false;
+		     }
+		     }); */
+		 
+			function resetPassword() {
+			  ajaxCall('resetPassword',null,'page_outline');
+			}
+			 
+			function forgotUserID() {
+			  ajaxCall('forgotUserID',null,'page_outline');
+			}			
+
+			function validateOTP() {
+				var data="otp="+$("#otp").val();
+				ajaxCall('validateParentLoginOtp',data,'page_outline');
+			}
+			
+			function openPage()	{
+				ajaxCall("vtopLogin",null,"page_outline");
+			}
+			
+			function openParentPage()	{
+				ajaxCall("vtopParentLogin",null,"page_outline");
+			}
+			
+			function openAlumniPage()	{
+				ajaxCall("alumni/alumniLoginPageControl",null,"page_outline");
+			}
+			
+
+			
+			
+			/*]]>*/
+		</script>			
+			
+	
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</div></body></html>
